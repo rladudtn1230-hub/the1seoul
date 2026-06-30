@@ -1,0 +1,169 @@
+/* The One Seoul GNB 헤더 (Figma node 19:4596 기준) */
+
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 0;
+  pointer-events: none; /* 카드 영역만 hover 타겟이 되도록 래퍼는 통과 */
+}
+
+/* 흰색 반투명 카드. 닫힘 70px → 열림 시 동적 높이로 transition */
+.card {
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  max-width: 1640px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 3px 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: height 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  height: 100%;
+  padding: 0 17px;
+}
+
+/* ── 로고 ── */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  flex-shrink: 0;
+}
+.logoImg {
+  width: 176px;
+  height: 44px;
+  display: block;
+}
+
+/* ── 우측 스택: 메뉴줄 + 서브메뉴 패널 (좌측 정렬 공유로 컬럼이 메뉴 아래 정렬) ── */
+.stack {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 70px;
+}
+
+.menuItem {
+  width: 120px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Pretendard, var(--font-geist-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  color: #111;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.menuItem:hover {
+  color: #006296;
+}
+
+/* 로그인 버튼 */
+.login {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  border: 1px solid #e8f2ff;
+  border-radius: 24px;
+  background-image: linear-gradient(
+    96.91deg,
+    rgb(181, 215, 255) 2.31%,
+    rgb(232, 242, 255) 92.23%
+  );
+}
+.loginIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.loginLabel {
+  font-family: Pretendard, var(--font-geist-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* 언어 버튼 */
+.lang {
+  width: 48px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.langIcon {
+  width: 48px;
+  height: 48px;
+}
+
+/* ── 서브메뉴 패널 ── */
+.panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 6px;
+  /* 슬라이드 + 페이드 */
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.panel[data-open="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.column {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subItem {
+  width: 120px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Pretendard, var(--font-geist-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+  color: #767676;
+  transition: color 0.2s ease;
+}
+.subItem:hover {
+  color: #111;
+}
