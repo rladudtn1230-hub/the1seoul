@@ -1,6 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import styles from "./Footer.module.css";
+import ArrowInsertIcon from "@/components/icons/svg/icon-arrow-insert.svg";
+import LogoWhiteIcon from "@/components/icons/svg/logo/logo-wh-footer.svg";
+import YoutubeIcon from "@/components/icons/svg/icon-youtube-wh.svg";
+import BlogIcon from "@/components/icons/svg/icon-blog-wh.svg";
 
 /**
  * 사이트 공용 푸터 (Figma node 324:9618).
@@ -12,8 +16,7 @@ export default async function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/common/logo_wh.png" alt="더원서울안과" className={styles.logo} />
+        <LogoWhiteIcon width={262} height={65} className={styles.logo} aria-hidden="true" />
 
         <div className={styles.row}>
           <div className={styles.callArea}>
@@ -21,8 +24,12 @@ export default async function Footer() {
             <p className={styles.callNumber}>{t("phone")}</p>
             <Link href="/support" className={styles.cta}>
               <span>{t("cta")}</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="images/footer/arrow.svg" alt="" className={styles.ctaArrow} />
+              <ArrowInsertIcon
+                width={38}
+                height={36}
+                className={styles.ctaArrow}
+                aria-hidden="true"
+              />
             </Link>
           </div>
 
@@ -38,12 +45,10 @@ export default async function Footer() {
 
               <div className={styles.social}>
                 <a href="#" className={styles.iconBtn} aria-label="Youtube">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="images/footer/youtube.svg" alt="" />
+                  <YoutubeIcon width={22} height={15} aria-hidden="true" />
                 </a>
                 <a href="#" className={styles.iconBtn} aria-label="Blog">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="images/footer/blog.svg" alt="" />
+                  <BlogIcon width={22} height={20} aria-hidden="true" />
                 </a>
               </div>
             </div>

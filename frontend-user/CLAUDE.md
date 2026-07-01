@@ -69,6 +69,22 @@ src/
 
 > 위 훅/Provider는 모두 클라이언트 전용(`"use client"`). 사용하는 컴포넌트에도 `"use client"`가 있어야 한다.
 
+### 4. SVG 아이콘 (SVGR)
+
+- 아이콘은 `.svg` 파일을 그대로 저장해두고 **SVGR로 자동 변환된 React 컴포넌트**로 import해서 쓴다. SVG 코드를 `.tsx`에 직접 옮겨 적지 않는다.
+- **저장 위치는 사용처와 무관하게 항상 `src/components/icons/svg/`** 하나로 통일한다. (일반 컴포넌트의 공용/페이지전용 colocate 규칙의 예외 — 아이콘은 로직 없는 leaf 에셋이라 재사용 여부를 미리 판단할 근거가 없고, 흩어두면 이미 있는 아이콘을 못 찾아 중복 생성하기 쉽다.)
+- **설정**
+  - `next.config.ts`의 `turbopack.rules`에서 `*.svg` → `@svgr/webpack` 로더 연결 (`icon: true`로 `width/height: 1em` 처리).
+  - `src/global.d.ts`에서 `*.svg` import를 `FC<SVGProps<SVGSVGElement>>` 컴포넌트 타입으로 선언.
+  - 이 설정은 **module import(`import X from "./x.svg"`) 경로에만 적용**된다. 기존 `public/images/...`를 `<img src>`/`next/image`로 쓰는 방식은 별개이며 영향 없음 — 색상 변경이 필요 없는 고정 이미지(로고 등)는 계속 `public/`에 둬도 된다.
+- **사용법**
+  ```tsx
+  import ArrowIcon from "@/components/icons/svg/arrow.svg";
+
+  <ArrowIcon width={24} height={24} className={styles.icon} />
+  ```
+- **색상 제어(hover 등)가 필요한 아이콘**: Figma에서 export한 SVG는 `fill`/`stroke`에 실제 색상값이 하드코딩되어 있다. 전역적으로 자동 치환하는 설정은 두지 않는다(다색 아이콘까지 같이 바뀌어버림). **props/CSS로 색을 바꿔야 하는 아이콘만, 그 파일을 추가할 때 수동으로 해당 `fill`/`stroke` 값을 `currentColor`로 고쳐서 넣는다.** 색 변경이 필요 없는 아이콘/로고는 원본 색 그대로 둔다.
+
 ## 다국어 (next-intl)
 
 ### 핵심 원칙 — 메시지는 페이지별 `message.ts`로 colocate
@@ -166,3 +182,4 @@ export default message;
 3. **Figma MCP 작업 후 디자인과 일치하는지 한 번 더 검토**한다.
 4. **Figma의 이미지 소스 사용 시 이미지를 변형하지 않고 그대로 사용**한다. (리사이즈/크롭/색보정 등 임의 변형 금지)
 5. **기존에 있는 컴포넌트를 최대한 활용**한다. 새로 만들기 전에 `src/components`를 먼저 확인할 것.
+6. **아이콘은 항상 `src/components/icons/svg/`에 둔다** (사용처 무관). 자세한 내용은 위 "SVG 아이콘 (SVGR)" 섹션 참고.

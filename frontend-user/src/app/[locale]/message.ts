@@ -37,6 +37,25 @@ const message = {
         title: "소개",
         description: "여기에 소개 서브 카테고리 문구가 들어갑니다.",
       },
+      location: {
+        brand: "The One · Seoul",
+        heading: { line1: "더원서울안과", line2: "오시는 길" },
+        exits: { exit6: "6번 출구", exit8: "8번 출구" },
+        hours: {
+          title: "진료시간",
+          weekday: { label: "평일", value: "오전 08:30 - 오후 5:30" },
+          saturday: { label: "토요일", value: "오전 08:30 - 오후 1:30" },
+          lunch: { label: "점심시간", value: "오후 01:00 - 오후 2:00" },
+          receptionClose: { label: "진료 마감", value: "30분 전 접수 마감" },
+          procedureClose: { label: "시술 마감", value: "2시간 전 접수 마감" },
+        },
+        address: {
+          title: "오시는 길",
+          line: "서울 강남구 강남대로 652 신사스퀘어 8, 9층",
+          direction: "신사역 6번 출구에서<br></br>도보로 5분 (330m) 직진",
+        },
+        mapLinks: { naver: "네이버 지도", kakao: "카카오 지도", google: "구글 지도", tmap: "티맵" },
+      },
     },
     nav: {
       login: "로그인",
@@ -79,6 +98,25 @@ const message = {
       about: {
         title: "About",
         description: "Your about subcategory copy goes here.",
+      },
+      location: {
+        brand: "The One · Seoul",
+        heading: { line1: "The One Seoul Eye Clinic", line2: "Directions" },
+        exits: { exit6: "Exit 6", exit8: "Exit 8" },
+        hours: {
+          title: "Hours",
+          weekday: { label: "Weekdays", value: "08:30 AM - 05:30 PM" },
+          saturday: { label: "Saturday", value: "08:30 AM - 01:30 PM" },
+          lunch: { label: "Lunch", value: "01:00 PM - 02:00 PM" },
+          receptionClose: { label: "Last Check-in", value: "Closes 30 min before" },
+          procedureClose: { label: "Procedure Close", value: "Closes 2 hrs before" },
+        },
+        address: {
+          title: "Directions",
+          line: "8-9F, Sinsa Square, 652 Gangnam-daero, Gangnam-gu, Seoul",
+          direction: "5 min walk (330m) straight<br></br>from Sinsa Station Exit 6",
+        },
+        mapLinks: { naver: "Naver Map", kakao: "Kakao Map", google: "Google Map", tmap: "T map" },
       },
     },
     nav: {
@@ -123,6 +161,25 @@ const message = {
         title: "紹介",
         description: "ここに紹介サブカテゴリの文言が入ります。",
       },
+      location: {
+        brand: "The One · Seoul",
+        heading: { line1: "ザ・ワン・ソウル眼科", line2: "アクセス" },
+        exits: { exit6: "6番出口", exit8: "8番出口" },
+        hours: {
+          title: "診療時間",
+          weekday: { label: "平日", value: "午前08:30 - 午後5:30" },
+          saturday: { label: "土曜日", value: "午前08:30 - 午後1:30" },
+          lunch: { label: "昼休み", value: "午後01:00 - 午後2:00" },
+          receptionClose: { label: "診療終了", value: "終了30分前まで受付" },
+          procedureClose: { label: "施術終了", value: "終了2時間前まで受付" },
+        },
+        address: {
+          title: "アクセス",
+          line: "ソウル江南区江南大路652 新沙スクエア8, 9階",
+          direction: "新沙駅6番出口から<br></br>徒歩5分 (330m) 直進",
+        },
+        mapLinks: { naver: "ネイバー地図", kakao: "カカオ地図", google: "Google地図", tmap: "Tmap" },
+      },
     },
     nav: {
       login: "ログイン",
@@ -165,6 +222,25 @@ const message = {
       about: {
         title: "介绍",
         description: "此处填写介绍子类目文案。",
+      },
+      location: {
+        brand: "The One · Seoul",
+        heading: { line1: "The One首尔眼科", line2: "交通指南" },
+        exits: { exit6: "6号出口", exit8: "8号出口" },
+        hours: {
+          title: "诊疗时间",
+          weekday: { label: "平日", value: "上午08:30 - 下午5:30" },
+          saturday: { label: "周六", value: "上午08:30 - 下午1:30" },
+          lunch: { label: "午休时间", value: "下午01:00 - 下午2:00" },
+          receptionClose: { label: "诊疗结束", value: "结束前30分钟停止挂号" },
+          procedureClose: { label: "手术结束", value: "结束前2小时停止挂号" },
+        },
+        address: {
+          title: "交通指南",
+          line: "首尔江南区江南大路652 新沙广场8, 9楼",
+          direction: "从新沙站6号出口<br></br>直行步行5分钟 (330m)",
+        },
+        mapLinks: { naver: "Naver地图", kakao: "Kakao地图", google: "谷歌地图", tmap: "Tmap" },
       },
     },
     nav: {

@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import HeroSection from "./_components/HeroSection";
+import LocationSection from "./_components/LocationSection";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -17,6 +18,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <main>
       <HeroSection />
+      <LocationSection />
     </main>
   );
 }

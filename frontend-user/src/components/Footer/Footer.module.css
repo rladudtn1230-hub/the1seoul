@@ -86,9 +86,8 @@
   color: var(--color-black);
 }
 .ctaArrow {
-  width: 22px;
-  height: 20px;
-  transform: scaleX(-1);
+  width: 38px;
+  height: 36px;
 }
 
 /* ── 우측: 정책 링크 / SNS / 회사정보 ── */

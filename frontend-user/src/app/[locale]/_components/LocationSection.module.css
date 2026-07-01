@@ -1,0 +1,270 @@
+/* The One Seoul 메인 "오시는 길" 섹션 (Figma node 110:7341) */
+
+.location {
+  position: relative;
+  padding: 140px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(170, 199, 232, 0.7) 100%);
+}
+
+.inner {
+  width: 77%;
+  max-width: 1486px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ── 좌측: 브랜드/타이틀 + 출구 탭 ── */
+.headingCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 224px;
+  flex-shrink: 0;
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.brand {
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-pretendard);
+  letter-spacing: -0.4px;
+}
+
+.headingLine {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.5;
+  color: var(--color-black);
+}
+
+.headingAccent {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #005ed9 21.154%, #65adff 50%, #0047cc 75.962%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.exitToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 100px;
+  background: var(--color-white);
+  box-shadow: 0px 4px 6px rgba(91, 151, 219, 0.2);
+}
+
+.exitButton {
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  color: #676767;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.exitButton[data-active="true"] {
+  background: #b5d8ff;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* ── 중앙: 지도 영역 (추후 출구별 동영상이 들어갈 자리, 지금은 비워둠) ── */
+.mapCard {
+  flex: 1 1 auto;
+  aspect-ratio: 887 / 637;
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: 2px 4px 9px rgba(54, 96, 158, 0.35);
+}
+
+/* ── 우측: 진료시간 / 오시는 길 / 지도 링크 ── */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 364px;
+  flex-shrink: 0;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.infoTitle {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 26px;
+  color: #015ed9;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hoursRow {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-family: var(--font-family-pretendard);
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: var(--color-black);
+}
+
+.hoursLabel {
+  width: 82px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.hoursValue {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-grey-90);
+}
+
+.addressLine {
+  font-family: var(--font-family-pretendard);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: var(--color-black);
+}
+
+.direction {
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  color: var(--color-black);
+}
+
+.mapLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.mapLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 19px 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-white);
+  background: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  color: var(--color-black);
+  transition: background 0.2s ease;
+}
+
+.mapLink:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.mapLinkIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* ── 모바일 (768px 기준) ── */
+@media (max-width: 768px) {
+  .location {
+    padding: 56px 0;
+  }
+
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .headingCol {
+    width: 100%;
+  }
+
+  .headingLine,
+  .headingAccent {
+    font-size: 26px;
+  }
+
+  .mapCard {
+    width: 100%;
+    order: 3;
+  }
+
+  .infoCol {
+    width: 100%;
+  }
+
+  .infoTitle {
+    font-size: 20px;
+  }
+
+  .hoursRow,
+  .addressLine,
+  .direction {
+    font-size: 16px;
+  }
+
+  .mapLinks {
+    gap: 8px;
+  }
+}
