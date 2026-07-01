@@ -47,16 +47,12 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div
-        className={styles.card}
-        style={{ height: cardHeight }}
-        onMouseLeave={handleClose}
-      >
+      <div className={styles.card} style={{ height: cardHeight }} onMouseLeave={handleClose}>
         <div className={styles.inner}>
           {/* 로고 */}
           <Link href="/" className={styles.logo} aria-label="더원서울안과">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/common/logo.svg" alt="더원서울안과" className={styles.logoImg} />
+            <img src="/images/common/logo.svg" alt="더원서울안과" className={styles.logoImg} />
           </Link>
 
           {/* 우측: 메뉴줄 + 패널 */}
@@ -70,13 +66,13 @@ export default function Header() {
 
               <Link href="/login" className={styles.login}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/header/login.svg" alt="" className={styles.loginIcon} />
+                <img src="/images/header/login.svg" alt="" className={styles.loginIcon} />
                 <span className={styles.loginLabel}>{t("login")}</span>
               </Link>
 
               <button type="button" className={styles.lang} aria-label="Language">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/header/globe.svg" alt="" className={styles.langIcon} />
+                <img src="/images/header/globe.svg" alt="" className={styles.langIcon} />
               </button>
             </nav>
 

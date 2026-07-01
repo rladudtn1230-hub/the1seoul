@@ -10,7 +10,22 @@ const message = {
   ko: {
     common: {
       header: { home: "홈", language: "언어" },
-      footer: { copyright: "© 2026 The One Seoul" },
+      footer: {
+        cta: "문의하기",
+        callLabel: "대표전화",
+        phone: "02-585-0202",
+        links: { privacy: "개인정보처리방침", nonCovered: "비급여 안내", patientRights: "환자의 권리와 의무" },
+        info: {
+          name: "더원서울안과의원",
+          ceo: "대표 허장원",
+          address: "주소 서울특별시 강남구 강남대로652(신사동504-11) 신사스퀘어 8, 9층",
+          tel: "대표전화 02-585-0202",
+          bizNo: "사업자번호 468-93-01492",
+          privacyManager: "개인정보처리관리자 허장원 원장 02-585-0202",
+        },
+        copyright: "ⓒ THE ONE SEOUL EYE CLINIC. ALL RIGHTS RESERVED.",
+        admin: "ADMIN",
+      },
       actions: { more: "더보기", submit: "확인", cancel: "취소" },
     },
     home: {
@@ -38,7 +53,22 @@ const message = {
   en: {
     common: {
       header: { home: "Home", language: "Language" },
-      footer: { copyright: "© 2026 The One Seoul" },
+      footer: {
+        cta: "Contact Us",
+        callLabel: "Main Line",
+        phone: "02-585-0202",
+        links: { privacy: "Privacy Policy", nonCovered: "Non-covered Fees", patientRights: "Patient Rights & Duties" },
+        info: {
+          name: "The One Seoul Eye Clinic",
+          ceo: "CEO Heo Jang-won",
+          address: "Address 8-9F, Sinsa Square, 652 Gangnam-daero, Gangnam-gu, Seoul (Sinsa-dong 504-11)",
+          tel: "Tel 02-585-0202",
+          bizNo: "Biz Reg. No. 468-93-01492",
+          privacyManager: "Privacy Officer Heo Jang-won, Director 02-585-0202",
+        },
+        copyright: "ⓒ THE ONE SEOUL EYE CLINIC. ALL RIGHTS RESERVED.",
+        admin: "ADMIN",
+      },
       actions: { more: "More", submit: "Submit", cancel: "Cancel" },
     },
     home: {
@@ -66,7 +96,22 @@ const message = {
   ja: {
     common: {
       header: { home: "ホーム", language: "言語" },
-      footer: { copyright: "© 2026 The One Seoul" },
+      footer: {
+        cta: "お問い合わせ",
+        callLabel: "代表電話",
+        phone: "02-585-0202",
+        links: { privacy: "個人情報処理方針", nonCovered: "非給与案内", patientRights: "患者の権利と義務" },
+        info: {
+          name: "ザ・ワン・ソウル眼科医院",
+          ceo: "代表 ホ・ジャンウォン",
+          address: "住所 ソウル特別市江南区江南大路652(新沙洞504-11)シンサスクエア8, 9階",
+          tel: "代表電話 02-585-0202",
+          bizNo: "事業者番号 468-93-01492",
+          privacyManager: "個人情報処理管理者 ホ・ジャンウォン院長 02-585-0202",
+        },
+        copyright: "ⓒ THE ONE SEOUL EYE CLINIC. ALL RIGHTS RESERVED.",
+        admin: "ADMIN",
+      },
       actions: { more: "もっと見る", submit: "確認", cancel: "キャンセル" },
     },
     home: {
@@ -94,7 +139,22 @@ const message = {
   zh: {
     common: {
       header: { home: "首页", language: "语言" },
-      footer: { copyright: "© 2026 The One Seoul" },
+      footer: {
+        cta: "咨询",
+        callLabel: "代表电话",
+        phone: "02-585-0202",
+        links: { privacy: "个人信息处理方针", nonCovered: "非医保项目说明", patientRights: "患者权利与义务" },
+        info: {
+          name: "The One首尔眼科医院",
+          ceo: "代表 许章源",
+          address: "地址 首尔特别市江南区江南大路652(新沙洞504-11)新沙广场8, 9楼",
+          tel: "代表电话 02-585-0202",
+          bizNo: "事业者编号 468-93-01492",
+          privacyManager: "个人信息处理管理者 许章源院长 02-585-0202",
+        },
+        copyright: "ⓒ THE ONE SEOUL EYE CLINIC. ALL RIGHTS RESERVED.",
+        admin: "ADMIN",
+      },
       actions: { more: "更多", submit: "确认", cancel: "取消" },
     },
     home: {
