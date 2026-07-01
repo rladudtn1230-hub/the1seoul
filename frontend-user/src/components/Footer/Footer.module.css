@@ -2,8 +2,8 @@
 
 .footer {
   position: relative;
+  padding: 75px 0 108px;
   overflow: hidden;
-  padding: 96px 40px 40px;
   background-color: #111;
   background-image: url("/images/footer/img_bg_footer.png");
   background-repeat: no-repeat;

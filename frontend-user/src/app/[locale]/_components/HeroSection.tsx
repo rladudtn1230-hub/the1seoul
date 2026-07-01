@@ -7,7 +7,7 @@ export default async function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.inner}>
-        <h1 className={styles.title}>{t("title")}</h1>
+        <h2 className={styles.title}>{t("title")}</h2>
         <p className={styles.subtitle}>{t("subtitle")}</p>
       </div>
     </section>
