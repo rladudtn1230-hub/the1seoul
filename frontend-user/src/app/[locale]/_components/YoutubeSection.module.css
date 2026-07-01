@@ -1,0 +1,193 @@
+/* The One Seoul 메인 "더원서울안과 유튜브" 섹션 (Figma node 110:9388) */
+
+.youtube {
+  position: relative;
+  padding: 200px 0;
+  background: var(--color-white);
+}
+
+/*
+ * 데스크톱에서 우측 슬라이더 영역이 화면 끝까지 뻗어나가도록(bleed),
+ * width+margin:auto 대신 좌측 여백만 padding으로 준다.
+ * --gutter는 기존 "width:77%; max-width:1486px; margin:0 auto"와 동일한 좌측 여백을 계산한 값이라
+ * 콘텐츠 위치는 그대로 유지되고, 우측은 padding이 없어 뻗어나갈 수 있다.
+ */
+.inner {
+  --gutter: max(11.5%, calc((100% - 1486px) / 2));
+  width: 100%;
+  padding-left: var(--gutter);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ── 좌측: 브랜드/타이틀 + 설명 + 채널 카드 ── */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brandText {
+  font-family: var(--font-family-birthstone);
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+}
+
+.brandIcon {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-pretendard);
+  letter-spacing: -0.4px;
+}
+
+.headingLine {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.5;
+  color: var(--color-black);
+}
+
+.headingAccent {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #005ed9 21.154%, #65adff 50%, #0047cc 75.962%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  color: var(--color-grey-40);
+}
+
+.channelList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channelCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 24px;
+  border: 1px solid #1782ff;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(181, 215, 255, 0.7) 0%, rgba(228, 240, 255, 0.7) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.channelProfile {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-white);
+}
+
+.channelName {
+  flex: 1 1 auto;
+  font-family: var(--font-family-pretendard);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  color: var(--color-black);
+}
+
+.channelCta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-black);
+}
+
+/* ── 모바일 (768px 기준) ── */
+@media (max-width: 768px) {
+  .youtube {
+    padding: 56px 0;
+  }
+
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .textCol {
+    width: 100%;
+  }
+
+  .headingLine,
+  .headingAccent {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .channelCard {
+    padding: 16px 20px;
+  }
+
+  .channelProfile {
+    width: 48px;
+    height: 48px;
+  }
+
+  .channelName {
+    font-size: 18px;
+  }
+
+  .channelCta {
+    width: 40px;
+    height: 40px;
+  }
+}

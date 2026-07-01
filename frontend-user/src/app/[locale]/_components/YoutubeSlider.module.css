@@ -1,0 +1,170 @@
+/* 유튜브 영상 슬라이더 (Figma node 110:9414, 페이지네이션 110:9690) */
+
+.sliderWrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.thumbnail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 480 / 270;
+  border-radius: 20px;
+  border: 1px dashed var(--color-grey-83);
+  background: var(--color-grey-97);
+}
+
+.thumbnailLabel {
+  font-family: var(--font-family-pretendard);
+  font-size: 14px;
+  color: var(--color-grey-57);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.title {
+  overflow: hidden;
+  width: 100%;
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+  color: var(--color-black);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.channelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.channelIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ff0031;
+}
+
+.channelName {
+  overflow: hidden;
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  color: var(--color-grey-33);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ── 페이지네이션 (진행 바 + 이전/다음 버튼) ──
+ * 슬라이더(.swiper)는 우측 화면 끝까지 뻗어나가지만, 페이지네이션은 텍스트 컬럼과 같은
+ * 우측 여백(YoutubeSection.module.css .inner의 --gutter)만큼 안쪽에 머물러야 한다.
+ */
+.paginationRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 20px;
+  padding-right: var(--gutter, 0px);
+}
+
+.progressTrack {
+  position: relative;
+  flex: 1 1 auto;
+  height: 2px;
+  min-width: 0;
+  border-radius: 999px;
+  background: #b5d8ff;
+  overflow: hidden;
+}
+
+.progressTrack :global(.swiper-pagination-progressbar-fill) {
+  background: #388ff3;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #b5d8ff;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.2s ease;
+}
+
+.navBtn:global(.swiper-button-disabled) {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.navButtons .navBtn:first-child svg {
+  transform: scaleX(-1);
+}
+
+/* ── 모바일 (768px 기준) ── */
+@media (max-width: 768px) {
+  .sliderWrap {
+    gap: 20px;
+  }
+
+  .paginationRow {
+    padding-right: 0;
+  }
+
+  .slide {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .navBtn {
+    width: 40px;
+    height: 40px;
+  }
+}

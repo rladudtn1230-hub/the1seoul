@@ -56,6 +56,20 @@ const message = {
         },
         mapLinks: { naver: "네이버 지도", kakao: "카카오 지도", google: "구글 지도", tmap: "티맵" },
       },
+      youtube: {
+        brand: { line1: "The One", line2: "Seoul" },
+        heading: { line1: "더원서울안과 유튜브", line2: "쉽게 배우는 눈 건강" },
+        description: "전문의의 깊이 있는 설명과 진료 철학을<br></br>영상으로 만나보세요.",
+        channels: { channel1: "더원서울안과TV", channel2: "더원의 허심탄회" },
+        channelCta: "구독하기",
+        slider: {
+          videoPlaceholder: "유튜브 영상 링크 영역",
+          titlePlaceholder: "영상 제목이 들어갈 영역",
+          channelPlaceholder: "채널명이 들어갈 영역",
+          prevLabel: "이전 영상",
+          nextLabel: "다음 영상",
+        },
+      },
     },
     nav: {
       login: "로그인",
@@ -117,6 +131,20 @@ const message = {
           direction: "5 min walk (330m) straight<br></br>from Sinsa Station Exit 6",
         },
         mapLinks: { naver: "Naver Map", kakao: "Kakao Map", google: "Google Map", tmap: "T map" },
+      },
+      youtube: {
+        brand: { line1: "The One", line2: "Seoul" },
+        heading: { line1: "The One Seoul Eye Clinic on YouTube", line2: "Eye Health, Simply Explained" },
+        description: "In-depth explanations and care philosophy from our specialists,<br></br>now on video.",
+        channels: { channel1: "더원서울안과TV", channel2: "더원의 허심탄회" },
+        channelCta: "Subscribe",
+        slider: {
+          videoPlaceholder: "YouTube video link area",
+          titlePlaceholder: "Video title area",
+          channelPlaceholder: "Channel name area",
+          prevLabel: "Previous video",
+          nextLabel: "Next video",
+        },
       },
     },
     nav: {
@@ -180,6 +208,20 @@ const message = {
         },
         mapLinks: { naver: "ネイバー地図", kakao: "カカオ地図", google: "Google地図", tmap: "Tmap" },
       },
+      youtube: {
+        brand: { line1: "The One", line2: "Seoul" },
+        heading: { line1: "ザ・ワン・ソウル眼科 YouTube", line2: "やさしく学ぶ目の健康" },
+        description: "専門医による詳しい説明と診療哲学を<br></br>映像でご覧ください。",
+        channels: { channel1: "더원서울안과TV", channel2: "더원의 허심탄회" },
+        channelCta: "登録する",
+        slider: {
+          videoPlaceholder: "YouTube動画リンク領域",
+          titlePlaceholder: "動画タイトル領域",
+          channelPlaceholder: "チャンネル名領域",
+          prevLabel: "前の動画",
+          nextLabel: "次の動画",
+        },
+      },
     },
     nav: {
       login: "ログイン",
@@ -241,6 +283,20 @@ const message = {
           direction: "从新沙站6号出口<br></br>直行步行5分钟 (330m)",
         },
         mapLinks: { naver: "Naver地图", kakao: "Kakao地图", google: "谷歌地图", tmap: "Tmap" },
+      },
+      youtube: {
+        brand: { line1: "The One", line2: "Seoul" },
+        heading: { line1: "The One首尔眼科 YouTube", line2: "轻松了解眼睛健康" },
+        description: "专科医生的详细讲解与诊疗理念，<br></br>请通过视频了解。",
+        channels: { channel1: "더원서울안과TV", channel2: "더원의 허심탄회" },
+        channelCta: "订阅",
+        slider: {
+          videoPlaceholder: "YouTube视频链接区域",
+          titlePlaceholder: "视频标题区域",
+          channelPlaceholder: "频道名称区域",
+          prevLabel: "上一个视频",
+          nextLabel: "下一个视频",
+        },
       },
     },
     nav: {

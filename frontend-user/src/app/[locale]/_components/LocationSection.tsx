@@ -35,28 +35,28 @@ export default async function LocationSection() {
                 <TimeIcon width={24} height={24} className={styles.infoIcon} aria-hidden="true" />
                 <p className={styles.infoTitle}>{t("hours.title")}</p>
               </div>
-              <dl className={styles.hoursList}>
-                <div className={styles.hoursRow}>
-                  <dt className={styles.hoursLabel}>{t("hours.weekday.label")}</dt>
-                  <dd className={styles.hoursValue}>{t("hours.weekday.value")}</dd>
-                </div>
-                <div className={styles.hoursRow}>
-                  <dt className={styles.hoursLabel}>{t("hours.saturday.label")}</dt>
-                  <dd className={styles.hoursValue}>{t("hours.saturday.value")}</dd>
-                </div>
-                <div className={styles.hoursRow}>
-                  <dt className={styles.hoursLabel}>{t("hours.lunch.label")}</dt>
-                  <dd className={styles.hoursValue}>{t("hours.lunch.value")}</dd>
-                </div>
-                <div className={styles.hoursRow}>
-                  <dt className={styles.hoursLabel}>{t("hours.receptionClose.label")}</dt>
-                  <dd className={styles.hoursValue}>{t("hours.receptionClose.value")}</dd>
-                </div>
-                <div className={styles.hoursRow}>
-                  <dt className={styles.hoursLabel}>{t("hours.procedureClose.label")}</dt>
-                  <dd className={styles.hoursValue}>{t("hours.procedureClose.value")}</dd>
-                </div>
-              </dl>
+              <ul className={styles.hoursList}>
+                <li className={styles.hoursRow}>
+                  <span className={styles.hoursLabel}>{t("hours.weekday.label")}</span>
+                  <span className={styles.hoursValue}>{t("hours.weekday.value")}</span>
+                </li>
+                <li className={styles.hoursRow}>
+                  <span className={styles.hoursLabel}>{t("hours.saturday.label")}</span>
+                  <span className={styles.hoursValue}>{t("hours.saturday.value")}</span>
+                </li>
+                <li className={styles.hoursRow}>
+                  <span className={styles.hoursLabel}>{t("hours.lunch.label")}</span>
+                  <span className={styles.hoursValue}>{t("hours.lunch.value")}</span>
+                </li>
+                <li className={styles.hoursRow}>
+                  <span className={styles.hoursLabel}>{t("hours.receptionClose.label")}</span>
+                  <span className={styles.hoursValue}>{t("hours.receptionClose.value")}</span>
+                </li>
+                <li className={styles.hoursRow}>
+                  <span className={styles.hoursLabel}>{t("hours.procedureClose.label")}</span>
+                  <span className={styles.hoursValue}>{t("hours.procedureClose.value")}</span>
+                </li>
+              </ul>
             </div>
 
             <div className={styles.divider} />

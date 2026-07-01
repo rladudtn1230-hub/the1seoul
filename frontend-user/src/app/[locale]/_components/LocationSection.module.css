@@ -111,6 +111,7 @@
 /* ── 중앙: 지도 영역 (추후 출구별 동영상이 들어갈 자리, 지금은 비워둠) ── */
 .mapCard {
   flex: 1 1 auto;
+  min-width: 320px;
   aspect-ratio: 887 / 637;
   border-radius: 16px;
   background: var(--color-white);
@@ -154,6 +155,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hoursRow {
