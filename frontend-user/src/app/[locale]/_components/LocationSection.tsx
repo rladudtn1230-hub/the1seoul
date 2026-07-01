@@ -21,7 +21,8 @@ export default async function LocationSection() {
       <div className={styles.inner}>
         <div className={styles.top}>
           <LocationMapPanel
-            brand={t("brand")}
+            brandLine1={t("brand.line1")}
+            brandLine2={t("brand.line2")}
             headingLine1={t("heading.line1")}
             headingLine2={t("heading.line2")}
             exit6Label={t("exits.exit6")}

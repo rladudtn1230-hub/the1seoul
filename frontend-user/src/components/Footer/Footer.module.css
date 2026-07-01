@@ -4,7 +4,7 @@
   position: relative;
   padding: 75px 0 108px;
   overflow: hidden;
-  background-color: #111;
+  background-color: var(--color-black);
   background-image: url("/images/footer/img-bg-footer.png");
   background-repeat: no-repeat;
   background-position: right top;
@@ -111,7 +111,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: var(--font-family-pretendard);
+  font-family: var(--font-family-noto-sans);
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.4px;
@@ -164,7 +164,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 24px;
-  font-family: var(--font-family-pretendard);
+  font-family: var(--font-family-noto-sans);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
@@ -173,7 +173,7 @@
 }
 
 .copyright {
-  font-family: var(--font-family-pretendard);
+  font-family: var(--font-family-montserrat);
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.4px;
@@ -188,7 +188,7 @@
   width: 64px;
   padding: 3px 6px;
   border: 1px solid var(--color-grey-53);
-  font-family: var(--font-family-pretendard);
+  font-family: var(--font-family-inter);
   font-size: 13px;
   color: var(--color-grey-53);
   transition:

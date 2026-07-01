@@ -6,9 +6,8 @@ import { routing } from "@/i18n/routing";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { pretendard } from "@/app/font";
+import { pretendard, notosans, montserrat, inter, kakaobigsans, birthstone } from "@/app/font";
 import "@/app/globals.css";
-
 
 export const metadata: Metadata = {
   title: "The One Seoul",
@@ -34,7 +33,10 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={pretendard.variable}>
+    <html
+      lang={locale}
+      className={`${pretendard.variable} ${notosans.variable} ${montserrat.variable} ${inter.variable} ${kakaobigsans.variable} ${birthstone.variable}`}
+    >
       <body>
         <NextIntlClientProvider>
           <Header />

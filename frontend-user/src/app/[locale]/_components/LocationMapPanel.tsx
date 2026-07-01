@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import styles from "./LocationSection.module.css";
+import CrossIcon from "@/components/icons/svg/icon-cross.svg";
 
 type Exit = "exit6" | "exit8";
 
 export default function LocationMapPanel({
-  brand,
+  brandLine1,
+  brandLine2,
   headingLine1,
   headingLine2,
   exit6Label,
   exit8Label,
 }: {
-  brand: string;
+  brandLine1: string;
+  brandLine2: string;
   headingLine1: string;
   headingLine2: string;
   exit6Label: string;
@@ -24,7 +27,11 @@ export default function LocationMapPanel({
     <>
       <div className={styles.headingCol}>
         <div className={styles.headingGroup}>
-          <p className={styles.brand}>{brand}</p>
+          <p className={styles.brand}>
+            <span className={styles.brandText}>{brandLine1}</span>
+            <CrossIcon width={6} height={6} className={styles.brandIcon} aria-hidden="true" />
+            <span className={styles.brandText}>{brandLine2}</span>
+          </p>
           <h2 className={styles.heading}>
             <span className={styles.headingLine}>{headingLine1}</span>
             <span className={styles.headingAccent}>{headingLine2}</span>

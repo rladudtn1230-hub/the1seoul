@@ -38,7 +38,7 @@ const message = {
         description: "여기에 소개 서브 카테고리 문구가 들어갑니다.",
       },
       location: {
-        brand: "The One · Seoul",
+        brand: { line1: "The One", line2: "Seoul" },
         heading: { line1: "더원서울안과", line2: "오시는 길" },
         exits: { exit6: "6번 출구", exit8: "8번 출구" },
         hours: {
@@ -100,7 +100,7 @@ const message = {
         description: "Your about subcategory copy goes here.",
       },
       location: {
-        brand: "The One · Seoul",
+        brand: { line1: "The One", line2: "Seoul" },
         heading: { line1: "The One Seoul Eye Clinic", line2: "Directions" },
         exits: { exit6: "Exit 6", exit8: "Exit 8" },
         hours: {
@@ -162,7 +162,7 @@ const message = {
         description: "ここに紹介サブカテゴリの文言が入ります。",
       },
       location: {
-        brand: "The One · Seoul",
+        brand: { line1: "The One", line2: "Seoul" },
         heading: { line1: "ザ・ワン・ソウル眼科", line2: "アクセス" },
         exits: { exit6: "6番出口", exit8: "8番出口" },
         hours: {
@@ -224,7 +224,7 @@ const message = {
         description: "此处填写介绍子类目文案。",
       },
       location: {
-        brand: "The One · Seoul",
+        brand: { line1: "The One", line2: "Seoul" },
         heading: { line1: "The One首尔眼科", line2: "交通指南" },
         exits: { exit6: "6号出口", exit8: "8号出口" },
         hours: {
