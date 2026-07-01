@@ -5,6 +5,9 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { MENU } from "@/lib/menu";
 import styles from "./Header.module.css";
+import Logo from "@/components/icons/svg/logo/logo.svg";
+import LoginIcon from "@/components/icons/svg/icon-login.svg";
+import GlobeIcon from "@/components/icons/svg/icon-globe.svg";
 
 const TOP_H = 70; // 메뉴줄 높이
 const PAD_BOTTOM = 24; // 패널 하단 여백
@@ -51,8 +54,7 @@ export default function Header() {
         <div className={styles.inner}>
           {/* 로고 */}
           <Link href="/" className={styles.logo} aria-label="더원서울안과">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/common/logo.svg" alt="더원서울안과" className={styles.logoImg} />
+            <Logo className={styles.logoImg} />
           </Link>
 
           {/* 우측: 메뉴줄 + 패널 */}
@@ -65,14 +67,12 @@ export default function Header() {
               ))}
 
               <Link href="/login" className={styles.login}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/header/login.svg" alt="" className={styles.loginIcon} />
+                <LoginIcon className={styles.loginIcon} />
                 <span className={styles.loginLabel}>{t("login")}</span>
               </Link>
 
               <button type="button" className={styles.lang} aria-label="Language">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/header/globe.svg" alt="" className={styles.langIcon} />
+                <GlobeIcon className={styles.langIcon} />
               </button>
             </nav>
 
