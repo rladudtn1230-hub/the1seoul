@@ -24,6 +24,26 @@ src/
   middleware.ts
 ```
 
+### 컴포넌트 폴더 구조 — 페이지 전용 컴포넌트는 `_components`로 colocate
+
+- **여러 페이지에서 재사용되는 공용 컴포넌트**만 `src/components`에 둔다.
+- **특정 페이지 하나에서만 쓰이는 컴포넌트**는 그 페이지 폴더 아래 `_components/`에 colocate 한다. (Next.js App Router 규칙상 `_`로 시작하는 폴더는 라우팅에서 제외되는 private folder)
+  - 예: `about` 페이지 전용 컴포넌트 → `src/app/[locale]/about/_components/`
+- 하위 라우트(`about/history/page.tsx` 등) 전용 컴포넌트는 그 라우트 폴더 자체에 `_components`를 둬 가장 좁은 범위에 colocate 한다.
+- 새 컴포넌트를 만들기 전 재사용 가능성을 먼저 판단한다: 여러 페이지에서 쓸 여지가 있으면 `src/components`, 해당 페이지 전용이면 `_components`. (기존 공용 컴포넌트 재사용 우선 원칙은 작업 규칙 5번 참고)
+
+```
+src/
+  components/           # 여러 페이지에서 재사용되는 공용 컴포넌트
+  app/[locale]/
+    about/
+      _components/      # about 페이지 전용 컴포넌트
+        Hero.tsx
+        Timeline.tsx
+      message.ts
+      page.tsx
+```
+
 ## 구현된 공용 기능
 
 ### 1. Lenis 부드러운 스크롤
