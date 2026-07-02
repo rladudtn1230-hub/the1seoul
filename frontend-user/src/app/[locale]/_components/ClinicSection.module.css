@@ -1,0 +1,387 @@
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+}
+
+.slideInner {
+  position: relative;
+  width: 100%;
+  height: 960px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Top center label ── */
+
+.sectionLabel {
+  margin: 203px 0 0;
+  font-family: var(--font-family-gloock);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  color: #388ff3;
+  opacity: 0.2;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* ── Content row (left / center / right) ── */
+
+.contentRow {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding: 0 80px 0 123px;
+  z-index: 2;
+}
+
+/* ── Left: Clinic title ── */
+
+.leftTitle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 43px;
+}
+
+.dotsIndicator {
+  flex-shrink: 0;
+  width: 10px;
+  height: 110px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.clinicLabel {
+  font-family: var(--font-family-birthstone);
+  font-weight: 400;
+  font-size: 38px;
+  line-height: normal;
+  color: #388ff3;
+  margin: 0 0 -10px;
+}
+
+.clinicTitle {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 75px;
+  letter-spacing: -0.4px;
+  color: #191919;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ── Center: Circle photo with crosshair ── */
+
+.centerArea {
+  position: relative;
+  width: 27.45vw;
+  height: 27.45vw;
+  flex-shrink: 0;
+  overflow: visible;
+  margin: 0 5.5vw;
+}
+
+/* ── Crosshair (SVG + CSS lines) ── */
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 이미지 대비 130% → 원형 링+브래킷이 이미지 바깥을 감싸도록 */
+  width: 135%;
+  height: 135%;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.chSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chLineH {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  right: -50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(139, 184, 232, 0) 0%,
+    #8bb8e8 5%,
+    #8bb8e8 95%,
+    rgba(139, 184, 232, 0) 100%
+  );
+  transform: translateY(-0.5px);
+}
+
+.chLineV {
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  bottom: -40%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(139, 184, 232, 0) 0%,
+    #8bb8e8 5%,
+    #8bb8e8 95%,
+    rgba(139, 184, 232, 0) 100%
+  );
+  transform: translateX(-0.5px);
+}
+
+.circlePhoto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* centerArea 기준 100% → SVG가 바깥에서 감싸는 효과 */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: none;
+}
+
+.circlePhotoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Custom cursor ── */
+
+.customCursor {
+  position: fixed;
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  background: rgba(181, 215, 255, 0.7);
+  backdrop-filter: blur(3px);
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-out;
+  z-index: 100;
+}
+
+.customCursorVisible {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.customCursorIcon {
+  color: #fff;
+}
+
+/* ── Right: Content points ── */
+
+.rightContent {
+  flex: 1;
+  max-width: 522px;
+}
+
+.pointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pointItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pointHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+}
+
+.pointNumber {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  color: #191919;
+}
+
+.pointTitle {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  color: #015ed9;
+  white-space: nowrap;
+}
+
+.pointDesc {
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  color: #666;
+  margin: 0;
+}
+
+.simpleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contentTitle {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  color: #015ed9;
+  margin: 0;
+}
+
+/* ── Background decorations ── */
+
+.bgCircleTopRight {
+  position: absolute;
+  top: -172px;
+  right: -150px;
+  width: 393px;
+  height: 393px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181, 215, 255, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bgCircleBottomLeft {
+  position: absolute;
+  bottom: -100px;
+  left: -237px;
+  width: 685px;
+  height: 685px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181, 215, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1400px) {
+  .contentRow {
+    padding: 0 40px 0 60px;
+  }
+
+  .rightContent {
+    max-width: 420px;
+  }
+
+  .pointTitle {
+    font-size: 22px;
+  }
+
+  .pointDesc {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slideInner {
+    height: auto;
+    min-height: 800px;
+    padding: 80px 20px;
+  }
+
+  .sectionLabel {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .contentRow {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .centerArea {
+    width: 45vw;
+    height: 45vw;
+  }
+
+  .rightContent {
+    max-width: 100%;
+  }
+
+  .bgCircleTopRight,
+  .bgCircleBottomLeft {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinicTitle {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .clinicLabel {
+    font-size: 28px;
+  }
+
+  .centerArea {
+    width: 65vw;
+    height: 65vw;
+  }
+
+  .pointHeader {
+    flex-wrap: wrap;
+  }
+
+  .pointNumber {
+    font-size: 22px;
+  }
+
+  .pointTitle {
+    font-size: 18px;
+    white-space: normal;
+  }
+
+  .pointDesc {
+    font-size: 15px;
+  }
+
+  .dotsIndicator {
+    display: none;
+  }
+}

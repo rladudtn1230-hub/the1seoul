@@ -1,0 +1,423 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 1285px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ── Background layers ── */
+
+.bgVessel {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.bgVesselImage {
+  object-fit: cover;
+}
+
+.bgEllipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 10px), calc(-50% - 7.5px));
+  pointer-events: none;
+  width: 966.337px;
+  height: 966.337px;
+}
+
+.bgEllipse img {
+  width: 100%;
+  height: 100%;
+}
+
+.bgFade {
+  position: absolute;
+  top: 890px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1942px;
+  height: 418px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Content ── */
+
+.content {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 830.969px;
+  gap: 38px;
+}
+
+/* ── Subtitle: The One + Seoul ── */
+
+.subtitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.subtitleText {
+  font-family: var(--font-family-birthstone);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: normal;
+  color: var(--color-black, #111);
+  white-space: nowrap;
+}
+
+.subtitleCross {
+  position: relative;
+  display: inline-grid;
+  width: 6.73px;
+  height: 6.73px;
+}
+
+.crossH {
+  position: absolute;
+  top: 3.12px;
+  left: 0;
+  width: 6.73px;
+  height: 0.5px;
+  background: var(--color-black, #111);
+}
+
+.crossV {
+  position: absolute;
+  top: 0;
+  left: 3.12px;
+  width: 0.5px;
+  height: 6.73px;
+  background: var(--color-black, #111);
+}
+
+/* ── Title ── */
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+}
+
+.titleLine1 {
+  font-family: var(--font-family-pretendard);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.5;
+  color: var(--color-black, #111);
+  margin: 0;
+}
+
+.titleLine2 {
+  font-family: var(--font-family-pretendard);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #005ed9 21.154%, #65adff 50%, #0047cc 75.962%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+}
+
+/* ── Description ── */
+
+.description {
+  width: 100%;
+  text-align: center;
+}
+
+.description p {
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.descSpacer {
+  height: 28.8px; /* line-height equivalent for empty line */
+}
+
+/* ── CTA Button ── */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 17.889px;
+  background: var(--color-black, #111);
+  color: #fff;
+  border-radius: 400px;
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+.ctaDot {
+  display: block;
+  width: 4.667px;
+  height: 4.667px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+/* ── Statistics Cards ── */
+
+.statsRow {
+  position: absolute;
+  left: 158.84px;
+  top: 846px;
+  z-index: 2;
+  display: flex;
+  gap: 0;
+}
+
+.card {
+  position: relative;
+  width: 400.078px;
+  height: 233.379px;
+  border-radius: 83.35px;
+  overflow: hidden;
+}
+
+.cardInner {
+  position: absolute;
+  top: 67.19px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardBlue {
+  background: var(--color-background-main, #b5d7ff);
+}
+
+.cardGrey {
+  background: #efefef;
+}
+
+.cardDark {
+  background: var(--color-black, #111);
+  color: #fff;
+}
+
+.cardValue {
+  display: flex;
+  align-items: center;
+  gap: 2.37px;
+}
+
+.cardNumber {
+  font-family: var(--font-family-pretendard);
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -3.84px;
+  white-space: nowrap;
+}
+
+.cardUnit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: -0.38px;
+  height: 64px;
+  line-height: 32px;
+}
+
+.cardLabel {
+  font-family: var(--font-family-pretendard);
+  font-weight: 400;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  margin: 0;
+  margin-top: 2px;
+  width: 305px;
+}
+
+.cardDark .cardLabel {
+  color: #d4d4d4;
+}
+
+/* ── Card 2: CT Equipment background ── */
+
+.cardBgEquipment {
+  position: absolute;
+  right: 48px;
+  top: -50px;
+  width: 158px;
+  height: 334px;
+  opacity: 0.4;
+  pointer-events: none;
+  transform: scaleY(-1) rotate(180deg);
+}
+
+.cardBgEquipmentImg {
+  width: 158px;
+  height: 334px;
+  object-fit: cover;
+}
+
+/* ── Card 3: Eye background image ── */
+
+.cardBgEyeImg {
+  object-fit: cover;
+  border-radius: 83.35px;
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1680px) {
+  .statsRow {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1600px) {
+  .statsRow {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 40px);
+  }
+
+  .card {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: auto;
+    min-height: 900px;
+    padding-bottom: 20px;
+  }
+
+  .content {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 28px;
+  }
+
+  .titleLine1,
+  .titleLine2 {
+    font-size: 26px;
+  }
+
+  .description p {
+    font-size: 15px;
+  }
+
+  .bgEllipse {
+    width: 400px;
+    height: 400px;
+  }
+
+  .bgFade {
+    display: none;
+  }
+
+  .cta {
+    font-size: 16px;
+    height: 38px;
+    padding: 0 16px;
+  }
+
+  .statsRow {
+    position: relative;
+    top: 100px;
+    left: 0;
+    transform: none;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: 50%;
+    height: 160px;
+    border-radius: 40px;
+    flex: none;
+  }
+
+  .cardInner {
+    top: 40px;
+  }
+
+  .cardNumber {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -2px;
+  }
+
+  .cardUnit {
+    font-size: 15px;
+    height: 40px;
+    line-height: 24px;
+  }
+
+  .cardLabel {
+    font-size: 14px;
+    width: auto;
+  }
+
+  .cardBgEquipment {
+    right: 20px;
+    top: -30px;
+    width: 80px;
+    height: 170px;
+  }
+
+  .cardBgEquipmentImg {
+    width: 80px;
+    height: 170px;
+  }
+}

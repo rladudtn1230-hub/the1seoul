@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Gloock } from "next/font/google";
 
 export const pretendard = localFont({
   src: "../../public/fonts/pretendard/PretendardVariable.woff2",
@@ -61,4 +62,11 @@ export const birthstone = localFont({
   display: "swap",
   weight: "400",
   fallback: ["system-ui", "arial", "sans-serif"],
+});
+
+export const gloock = Gloock({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-gloock",
+  display: "swap",
 });

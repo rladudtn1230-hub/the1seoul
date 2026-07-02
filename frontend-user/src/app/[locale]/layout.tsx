@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { pretendard, notosans, montserrat, inter, kakaobigsans, birthstone } from "@/app/font";
+import { pretendard, notosans, montserrat, inter, kakaobigsans, birthstone, gloock } from "@/app/font";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${pretendard.variable} ${notosans.variable} ${montserrat.variable} ${inter.variable} ${kakaobigsans.variable} ${birthstone.variable}`}
+      className={`${pretendard.variable} ${notosans.variable} ${montserrat.variable} ${inter.variable} ${kakaobigsans.variable} ${birthstone.variable} ${gloock.variable}`}
     >
       <body>
         <NextIntlClientProvider>
