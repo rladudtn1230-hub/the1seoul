@@ -48,17 +48,6 @@ export const MENU: MenuItem[] = [
     ],
   },
   {
-    key: "vision",
-    href: "/vision-correction",
-    children: [
-      { key: "todaylasek", href: "/vision-correction" },
-      { key: "doctors", href: "/vision-correction" },
-      { key: "research", href: "/vision-correction" },
-      { key: "equipment", href: "/vision-correction" },
-      { key: "location", href: "/vision-correction" },
-    ],
-  },
-  {
     key: "myopia",
     href: "/myopia",
     children: [
