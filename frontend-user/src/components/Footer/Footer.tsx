@@ -44,10 +44,20 @@ export default async function Footer() {
               </nav>
 
               <div className={styles.social}>
-                <a href="#" className={styles.iconBtn} aria-label="Youtube">
+                <a
+                  href="https://www.youtube.com/@the1seoul"
+                  target="_blank"
+                  className={styles.iconBtn}
+                  aria-label="Youtube"
+                >
                   <YoutubeIcon width={22} height={15} aria-hidden="true" />
                 </a>
-                <a href="#" className={styles.iconBtn} aria-label="Blog">
+                <a
+                  href="https://blog.naver.com/io04q1064ii"
+                  target="_blank"
+                  className={styles.iconBtn}
+                  aria-label="Blog"
+                >
                   <BlogIcon width={22} height={20} aria-hidden="true" />
                 </a>
               </div>
